@@ -2,13 +2,11 @@ const timer = document.querySelector(".timer");
 const secFinger = document.querySelector(".clock__finger__sec");
 const minFinger = document.querySelector(".clock__finger__min");
 const hourFinger = document.querySelector(".clock__finger__hour");
-
+const audio = document.querySelector("audio")
+audio.currentTime = 0;
 
 function running() {
-    const audio = document.querySelector("audio")
-    audio.currentTime = 0;
     audio.play();
-
     const now = new Date();
     timer.innerHTML = now.toLocaleTimeString();
 
